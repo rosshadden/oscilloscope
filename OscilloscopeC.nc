@@ -55,7 +55,6 @@ implementation {
 		local.id = TOS_NODE_ID;
 		if (call RadioControl.start() != SUCCESS)
 			report_problem();
-		printf("%s\n", "Hello.");
 	}
 
 	void startTimer() {
@@ -101,6 +100,7 @@ implementation {
 				// Don't need to check for null because we've already checked length
 				// above
 				memcpy(call AMSend.getPayload(&sendBuf, sizeof(local)), &local, sizeof local);
+				printf("%i\n", local);
 				if (call AMSend.send(AM_BROADCAST_ADDR, &sendBuf, sizeof local) == SUCCESS)
 					sendBusy = TRUE;
 			}

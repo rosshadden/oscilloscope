@@ -55,6 +55,7 @@ implementation {
 		local.id = TOS_NODE_ID;
 		if (call RadioControl.start() != SUCCESS)
 			report_problem();
+		printf("%s\n", "Hello.");
 	}
 
 	void startTimer() {

@@ -1,3 +1,5 @@
+// serial@/dev/ttyUSB0:telosb
+
 /*
  * Copyright (c) 2006 Intel Corporation
  * All rights reserved.
